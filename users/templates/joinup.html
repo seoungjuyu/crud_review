@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+</head>
+<body>
+ <h1>회원가입</h1>
+ 
+ <form action="{% url 'users:join-up' %}" method="POST">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="username"/>
+    <input type="password" name="password"  placeholder="password"/>
+    <input type="password2" name="password2"  placeholder="password2"/>
+    <input type="submit" name="joinup"/>
+
+ </form>
+</body>
+</html>
